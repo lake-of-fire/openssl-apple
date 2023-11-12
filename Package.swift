@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.9
 
 // Copyright 2022 Michael F. Collins, III
 //
@@ -41,12 +41,12 @@ let package = Package(
                 "COpenSSL",
                 "libcrypto",
                 "libssl"
-            ]
-        ),
+            ],
+            swiftSettings: [.interoperabilityMode(.C)]),
         .target(
             name: "COpenSSL",
-            publicHeadersPath: "./"
-        ),
+            publicHeadersPath: "./",
+            swiftSettings: [.interoperabilityMode(.C)]),
         .binaryTarget(
             name: "libcrypto",
 			url: "https://github.com/mfcollins3/openssl-apple/releases/download/0.1.0/libcrypto.zip",
