@@ -25,8 +25,8 @@ import PackageDescription
 let package = Package(
     name: "OpenSSL",
 	platforms: [
-		.iOS(.v11),
-		.macOS(.v10_13)
+		.iOS(.v12),
+		.macOS(.v11)
 	],
     products: [
         .library(
