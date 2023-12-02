@@ -45,6 +45,9 @@ let package = Package(
             swiftSettings: [.interoperabilityMode(.C)]),
         .target(
             name: "COpenSSL",
+            dependencies: [
+                "libssl",
+            ],
             publicHeadersPath: "./",
             swiftSettings: [.interoperabilityMode(.C)]),
         .binaryTarget(
